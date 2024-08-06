@@ -17,8 +17,6 @@ This project is a Spring Boot application for managing a library system. It prov
 - **Spring Boot:** For building the application.
 - **Spring Data JPA:** For database interaction.
 - **H2 Database:** An in-memory database for development and testing.
-- **JUnit:** For unit testing.
-- **Mockito:** For mocking dependencies in tests.
 - **AspectJ:** For AOP logging.
 - **Spring Cache:** For caching frequently accessed data.
 
@@ -34,5 +32,5 @@ This project is a Spring Boot application for managing a library system. It prov
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/library-test.git
+git clone git@github.com:AmmarMakhlouf/maids_test.git
 cd library-test
