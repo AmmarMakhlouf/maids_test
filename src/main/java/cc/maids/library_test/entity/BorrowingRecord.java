@@ -60,6 +60,9 @@ public class BorrowingRecord {
         this.isReturned = false;
     }
 
+    public void setId(Long id) {
+       this.id = id;
+    }
     public Long getId() {
         return id;
     }
