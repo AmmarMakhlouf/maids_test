@@ -11,14 +11,18 @@ This project is a Spring Boot application for managing a library system. It prov
 - **Borrowing Records:** Track borrowing and returning of books.
 - **Logging:** Uses Aspect-Oriented Programming (AOP) to log method calls, exceptions, and performance metrics.
 - **Caching:** Implements caching for frequently accessed data to improve performance.
+- **Unit Testing** Unit tests for most important API endpoints functionalities.
 
-## Technologies Used
+## Most Important Technologies Used
 
 - **Spring Boot:** For building the application.
+- **Maven** as build and dependency manager.
 - **Spring Data JPA:** For database interaction.
 - **H2 Database:** An in-memory database for development and testing.
 - **AspectJ:** For AOP logging.
 - **Spring Cache:** For caching frequently accessed data.
+- **Mockito** For unit tests.
+
 
 ## Prerequisites
 
@@ -33,4 +37,6 @@ First, clone the repository to your local machine:
 
 ```bash
 git clone git@github.com:AmmarMakhlouf/maids_test.git
-cd library-test
+
+### For testing use the following command under working directory:
+mvn test
