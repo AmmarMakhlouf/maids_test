@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "569d0b2e-0e70-46ac-9b50-3d97327e4d70",
+		"name": "MaidsTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4978565"
+	},
+	"item": [
+		{
+			"name": "Books Management",
+			"item": [
+				{
+					"name": "GetAllBooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/books",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBookById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/books/9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"The Silent Patient\",\r\n  \"author\": \"Alex Michaelides\",\r\n  \"publicationYear\": 2019,\r\n  \"isbn\": \"9781250302607\",\r\n  \"totalQuantity\": 11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/books",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Spring Boot For Developer\",\r\n  \"author\": \"Ammar Makhlouf\",\r\n  \"publicationYear\": 2024,\r\n  \"isbn\": \"8881200000500\",\r\n  \"totalQuantity\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/books/10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Spring Boot For Developers\",\r\n  \"author\": \"Ammar Makhlouf\",\r\n  \"publicationYear\": 2024,\r\n  \"isbn\": \"8881200000000\",\r\n  \"totalQuantity\": 17\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/books/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"books",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 05 Aug 2024 20:02:59 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"title\": \"Spring Boot For Developers\",\n    \"author\": \"Ammar Makhlouf\",\n    \"publicationYear\": 2024,\n    \"isbn\": \"8881200000000\",\n    \"totalQuantity\": 46\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/books/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patrons Management",
+			"item": [
+				{
+					"name": "GetAllPatrons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/patrons",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"patrons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPatronById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/patrons/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"patrons",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Patron",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ammar Makhlouf\",\r\n  \"email\": \"ammar.makhluf@gmail.com\",\r\n  \"contactInformation\": \"+9639944000000\",\r\n  \"address\": \"Damascus, Syria\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/patrons",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"patrons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Patron",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ammar 2\",\r\n  \"email\": \"ammar.makhluf@live.com\",\r\n  \"contactInformation\": \"+9639944000000\",\r\n  \"address\": \"Damascus, Syria\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/patrons/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"patrons",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Patron",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/patrons/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"patrons",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Borrowing",
+			"item": [
+				{
+					"name": "Borrow Book By Patron",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/borrowing-records/borrow/4/patron/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"borrowing-records",
+								"borrow",
+								"4",
+								"patron",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Return Borrowed Book By Patron",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/borrowing-records/return/1/patron/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"borrowing-records",
+								"return",
+								"1",
+								"patron",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:8080",
+			"type": "string"
+		}
+	]
+}
