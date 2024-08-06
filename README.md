@@ -37,6 +37,7 @@ First, clone the repository to your local machine:
 
 ```bash
 git clone git@github.com:AmmarMakhlouf/maids_test.git
-
+```
 ### For testing use the following command under working directory:
+```bash
 mvn test
